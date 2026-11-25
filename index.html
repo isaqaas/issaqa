@@ -2,257 +2,126 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISAQA — Math & Color Studio</title>
-
-<meta name="description" content="ISAQA — математический тренажёр и лаборатория цветовых палитр, смешивания оттенков волос.">
-<meta name="keywords" content="ISAQA, математика онлайн, палитры цветов, смешивание цветов волос">
-<meta name="author" content="ISAQA">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="ISAQA — Math & Color Studio">
-<meta property="og:description" content="Учись математике и создавай красивые цветовые сочетания!">
-<meta property="og:type" content="website">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTECH — Магазин ноутбуков</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="brand">
-        ISAQA<span>.</span>
-        <small>MATH & COLOR STUDIO</small>
-    </div>
+<header class="header">
+    <a href="index.html" class="logo">NO<span>TECH</span></a>
 
-    <nav>
-        <a href="#home">Главная</a>
-        <a href="#math">Математика</a>
-        <a href="#colors">Палитры</a>
-    </nav>
+    <!-- Здесь позже добавим твою навигацию -->
+    <nav></nav>
+
+    <a href="#catalog" class="cart-button">
+        Корзина <span id="cart-count">0</span>
+    </a>
 </header>
 
-<section class="hero" id="home">
-    <div class="hero-content">
-        <span class="tag">WELCOME TO ISAQA</span>
-        <h1>Learn. Create.<br><span>Explore.</span></h1>
-        <p>
-            Изучай математику, экспериментируй с цветами
-            и развивай свои способности каждый день.
-        </p>
+<main id="home-view">
 
-        <div class="hero-buttons">
-            <a href="#math" class="primary-btn">Начать учиться →</a>
-            <a href="#colors" class="secondary-btn">Палитры цветов</a>
-        </div>
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label">ТЕХНОЛОГИИ БУДУЩЕГО</div>
 
-    <div class="hero-card">
-        <div class="circle">✦</div>
-        <h2>YOUR SPACE</h2>
-        <p>Knowledge is power.</p>
-        <div class="decor-colors">
-            <span></span><span></span><span></span><span></span>
-        </div>
-    </div>
-</section>
+            <h1>
+                Найди свой <span>идеальный</span> ноутбук
+            </h1>
 
-<main>
-
-<section id="math" class="section">
-    <div class="section-title">
-        <span>01 — LEARN</span>
-        <h2>MathSpace 🧮</h2>
-        <p>Тренируй математические навыки.</p>
-    </div>
-
-    <div class="math-card">
-        <h3>Выбери действие</h3>
-
-        <div class="operations">
-            <button class="operation active" data-op="+">+</button>
-            <button class="operation" data-op="-">−</button>
-            <button class="operation" data-op="*">×</button>
-            <button class="operation" data-op="/">÷</button>
-        </div>
-
-        <div class="example-box">
-            <small>РЕШИ ПРИМЕР</small>
-            <h1 id="example">5 + 3 = ?</h1>
-        </div>
-
-        <div class="answer-row">
-            <input type="number" id="answer" placeholder="Твой ответ">
-            <button id="check">Проверить</button>
-        </div>
-
-        <p id="message"></p>
-        <button id="next" class="next-btn">Следующий пример →</button>
-
-        <div class="score">
-            <div>
-                <h3 id="correct">0</h3>
-                <small>Правильно</small>
-            </div>
-            <div>
-                <h3 id="wrong">0</h3>
-                <small>Ошибки</small>
-            </div>
-            <div>
-                <h3 id="total">0</h3>
-                <small>Всего</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="colors" class="section colors-section">
-    <div class="section-title">
-        <span>02 — CREATE YOUR COLORS</span>
-        <h2>ColorSpace 🎨</h2>
-        <p>Твоя личная лаборатория оттенков волос.</p>
-    </div>
-
-    <div class="color-card">
-
-        <h3>💇 Палитра цветов волос</h3>
-        <p class="color-description">
-            Выбирай оттенки из готовой коллекции.
-        </p>
-
-        <div class="palette" id="palette">
-
-            <button class="shade" data-color="#FFF0C9" style="background:#FFF0C9" title="Сливочный блонд"></button>
-            <button class="shade" data-color="#F1D49A" style="background:#F1D49A" title="Золотистый блонд"></button>
-            <button class="shade selected" data-color="#E6C28B" style="background:#E6C28B" title="Натуральный блонд"></button>
-            <button class="shade" data-color="#D8B477" style="background:#D8B477" title="Медовый блонд"></button>
-            <button class="shade" data-color="#C5A77C" style="background:#C5A77C" title="Бежевый блонд"></button>
-            <button class="shade" data-color="#B9B1A1" style="background:#B9B1A1" title="Пепельный блонд"></button>
-
-            <button class="shade" data-color="#987453" style="background:#987453" title="Русый"></button>
-            <button class="shade" data-color="#79472E" style="background:#79472E" title="Каштановый"></button>
-            <button class="shade" data-color="#593522" style="background:#593522" title="Шоколад"></button>
-            <button class="shade" data-color="#70452D" style="background:#70452D" title="Молочный шоколад"></button>
-            <button class="shade" data-color="#432B22" style="background:#432B22" title="Тёмный шоколад"></button>
-            <button class="shade" data-color="#A87950" style="background:#A87950" title="Карамель"></button>
-
-            <button class="shade" data-color="#B95D36" style="background:#B95D36" title="Медный"></button>
-            <button class="shade" data-color="#A6422E" style="background:#A6422E" title="Рыжий"></button>
-            <button class="shade" data-color="#873D32" style="background:#873D32" title="Махагон"></button>
-            <button class="shade" data-color="#722F35" style="background:#722F35" title="Бордовый"></button>
-            <button class="shade" data-color="#C77C54" style="background:#C77C54" title="Терракотовый"></button>
-            <button class="shade" data-color="#D69A69" style="background:#D69A69" title="Персиковый"></button>
-
-            <button class="shade" data-color="#D58FA7" style="background:#D58FA7" title="Пастельно-розовый"></button>
-            <button class="shade" data-color="#B85A86" style="background:#B85A86" title="Ягодный"></button>
-            <button class="shade" data-color="#9B79C5" style="background:#9B79C5" title="Лавандовый"></button>
-            <button class="shade" data-color="#7667B5" style="background:#7667B5" title="Фиолетовый"></button>
-            <button class="shade" data-color="#668DAA" style="background:#668DAA" title="Голубой"></button>
-            <button class="shade" data-color="#477C76" style="background:#477C76" title="Мятный"></button>
-            <button class="shade" data-color="#49704B" style="background:#49704B" title="Зелёный"></button>
-            <button class="shade" data-color="#29252A" style="background:#29252A" title="Чёрный"></button>
-
-        </div>
-
-        <p id="selectedName" class="color-description">
-            Выбранный цвет: Натуральный блонд
-        </p>
-
-        <div class="custom-color">
-            <h3>🖌 Свой цвет</h3>
-            <p class="color-description">
-                Выбери любой оттенок самостоятельно.
-            </p>
-            <input type="color" id="customColor" value="#E6C28B">
-            <button id="addCustomColor">Добавить в палитру</button>
-        </div>
-
-        <div class="mixer">
-            <h3>✨ Лаборатория смешивания</h3>
-            <p class="color-description">
-                Смешивай от двух до четырёх цветов.
+            <p>
+                Мощные ноутбуки для работы, учёбы, игр
+                и творчества. Выбирай технику под свои задачи.
             </p>
 
-            <div id="mixInputs">
+            <a href="#catalog" class="main-button">
+                Смотреть каталог →
+            </a>
+        </div>
 
-                <div class="mix-item">
-                    <label>Цвет 1</label>
-                    <input type="color" class="mix-color" value="#E6C28B">
-                    <label>Пропорция</label>
-                    <input type="range" class="mix-weight" min="0" max="100" value="50">
-                    <span class="weight-value">50%</span>
-                </div>
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1000"
+                alt="Современный ноутбук"
+            >
+        </div>
+    </section>
 
-                <div class="mix-item">
-                    <label>Цвет 2</label>
-                    <input type="color" class="mix-color" value="#593522">
-                    <label>Пропорция</label>
-                    <input type="range" class="mix-weight" min="0" max="100" value="50">
-                    <span class="weight-value">50%</span>
-                </div>
+    <section class="container" id="catalog">
 
-                <div class="mix-item extra-color hidden">
-                    <label>Цвет 3</label>
-                    <input type="color" class="mix-color" value="#B95D36">
-                    <label>Пропорция</label>
-                    <input type="range" class="mix-weight" min="0" max="100" value="0">
-                    <span class="weight-value">0%</span>
-                </div>
-
-                <div class="mix-item extra-color hidden">
-                    <label>Цвет 4</label>
-                    <input type="color" class="mix-color" value="#D58FA7">
-                    <label>Пропорция</label>
-                    <input type="range" class="mix-weight" min="0" max="100" value="0">
-                    <span class="weight-value">0%</span>
-                </div>
-
+        <div class="section-heading">
+            <div>
+                <div class="subtitle">НАШ АССОРТИМЕНТ</div>
+                <h2>Каталог ноутбуков</h2>
             </div>
 
-            <div class="mixer-buttons">
-                <button id="addMixColor">+ Добавить цвет</button>
-                <button id="removeMixColor">− Убрать цвет</button>
-            </div>
-
-            <div class="result-color" id="resultColor"></div>
-
-            <div class="result-info">
-                <span class="result-label">ТВОЙ НОВЫЙ ОТТЕНОК</span>
-                <h2 id="mixedName">Авторский оттенок</h2>
-                <p id="hexCode">#9C7B5A</p>
-                <button id="copyColor">Скопировать HEX</button>
-                <button id="saveColor">♥ Сохранить оттенок</button>
+            <div class="product-total" id="product-total">
+                8 моделей
             </div>
         </div>
 
-        <div class="saved-section">
-            <h3>❤️ Мои любимые оттенки</h3>
-            <div id="savedColors" class="saved-colors">
-                <p class="color-description">Пока нет сохранённых цветов.</p>
-            </div>
+        <div class="search-form">
+            <input
+                type="text"
+                id="search"
+                placeholder="Поиск ноутбука или бренда..."
+            >
+            <button type="button" id="search-button">
+                Найти
+            </button>
         </div>
 
-    </div>
-</section>
+        <div class="categories">
+            <a href="#" class="active" data-category="Все">Все</a>
+            <a href="#" data-category="Игровые">Игровые</a>
+            <a href="#" data-category="Для работы">Для работы</a>
+            <a href="#" data-category="Для учёбы">Для учёбы</a>
+            <a href="#" data-category="Премиум">Премиум</a>
+        </div>
 
-<section class="about">
-    <span>ABOUT THIS PROJECT</span>
-    <h2>Создано с идеей.</h2>
-    <p>
-        ISAQA — личное пространство для обучения,
-        экспериментов и творчества.
-    </p>
-    <h3>CREATED BY ISAQA ♥</h3>
-</section>
+        <div class="products" id="products"></div>
+
+    </section>
+
+    <section class="advantages">
+        <div>
+            <span>💻</span>
+            <h3>Большой выбор</h3>
+            <p>Ноутбуки для любых задач и потребностей.</p>
+        </div>
+
+        <div>
+            <span>⚡</span>
+            <h3>Подробные характеристики</h3>
+            <p>Вся информация о процессорах, памяти и видеокартах.</p>
+        </div>
+
+        <div>
+            <span>🎯</span>
+            <h3>Удобный выбор</h3>
+            <p>Сравнивай модели и выбирай подходящую.</p>
+        </div>
+    </section>
 
 </main>
 
+<!-- Страница характеристик -->
+<main id="details-view" hidden>
+    <section class="details-container">
+        <a href="index.html" class="back-link">
+            ← Назад в каталог
+        </a>
+
+        <div id="details-content"></div>
+    </section>
+</main>
+
 <footer>
-    <div class="footer-logo">ISAQA.</div>
-    <p>Math & Color Studio · © 2026</p>
+    <a href="index.html" class="logo">NO<span>TECH</span></a>
+    <p>© 2026 NOTECH. Каталог ноутбуков.</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
